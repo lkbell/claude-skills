@@ -1,0 +1,7 @@
+{
+  "name": "landon-hub",
+  "owner": { "name": "Landon Bell", "email": "landon.bell@gmail.com" },
+  "plugins": [
+    { "name": "personal", "source": "./plugins/personal", "description": "Landon's personal skills" }
+  ]
+}
