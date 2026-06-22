@@ -31,6 +31,8 @@ The single most important thing this skill does is **tell which mode Landon is i
 
 **How to tell:** **infer from context and proceed** — don't interrogate him with "is this real or not?" Signals of planning: firm or target dates, "we're going," a named trip, working out logistics, budgets, booking intent. Signals of exploring: "thinking about," "someday," "what if," no dates, pure curiosity. **When the signals are mixed, lean to the lighter touch** — staying flexible is almost never annoying; prematurely pushing bookings is. Let his cues pull you deeper, and shift into full planning mode the moment it's clear. The modes aren't a hard wall — a brainstorm can turn into planning mid-conversation; follow him.
 
+**When travel comes up only in passing** (an offhand "man, I need a vacation" or "I'd love to see Japan someday"), read whether he actually wants help before diving in. A light offer — "want me to spin up some ideas?" — beats an unprompted itinerary. Don't turn every stray travel mention into a project.
+
 A through-line for both modes: Landon loves the **cool, the unique, and the hidden gem** — the standout local experience over the obvious tourist default. Bring that to dreaming *and* planning.
 
 ## What they love (use in both modes)
