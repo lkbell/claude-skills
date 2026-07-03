@@ -98,7 +98,7 @@ Every specific product you recommend gets a consistent block. This is the part d
 - **Key specs** — the few that actually matter for the decision.
 - **Review snapshot** — what credible third-party reviews and aggregate marketplace scores say, with a sense of the source and the consensus (and any notable gripes).
 - **Best price / best way to buy** — shop around across retailers and tell him the best place to get it, flagging meaningful price differences or bundle/configuration gotchas.
-- **Direct purchase link — always.** A link that goes straight to the specific item's purchase page, not a search results page or the brand's homepage. This is non-negotiable.
+- **Direct purchase link — always.** A link that goes straight to the specific item's purchase page, not a search results page or the brand's homepage. This is non-negotiable. **Format it as a clickable Markdown link** — the product name as the link text, e.g. `[Product Name](https://retailer.com/exact-product-page)` — never a bare or partial URL pasted as text.
 
 ## Where to buy
 
