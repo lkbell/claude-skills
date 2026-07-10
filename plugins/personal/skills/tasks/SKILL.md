@@ -1,6 +1,6 @@
 ---
 name: tasks
-description: Run Landon's day-to-day to-dos on his ClickUp kanban board. Use whenever he wants to add, capture, update, re-prioritize, re-status, triage, or clean up tasks — or whenever an action item surfaces in conversation that should be captured — across his 10 life-area Lists (LKB Personal/Professional, KCB Personal, LWT, Baby, Errands, Family, Relocation, Finances, Projects). Loads the operating model for how Claude runs the board. Requires the ClickUp connector.
+description: Run Landon's day-to-day to-dos on his ClickUp kanban board (10 life-area Lists). Use whenever he wants to add, update, re-prioritize, or triage tasks — or whenever an action item surfaces in conversation that should be captured. Requires the ClickUp connector.
 ---
 
 # Tasks — run Landon's ClickUp board

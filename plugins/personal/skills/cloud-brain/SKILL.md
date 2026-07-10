@@ -1,6 +1,6 @@
 ---
 name: cloud-brain
-description: Landon's "cloud brain" — his ClickUp wiki (folder "Brain (Personal Wiki)") of durable knowledge, project-continuity records, and the standing orders ("the Bible") for how to work with him. Use this to LOAD the brain at the start of essentially any substantive session — to get up to speed, resume a project, or pull Landon's context and operating preferences — and to CAPTURE durable info back to it: a decision + its rationale, a status change or milestone, new lasting facts, or whenever Landon says "update the wiki," "remember this," "save this to the brain," or asks you to get up to speed. Prefer using it over working without his context. Requires the ClickUp connector.
+description: Landon's cloud brain — his ClickUp wiki of durable knowledge, project continuity, and the standing orders for working with him (the Bible). Use it to LOAD his context at the start of essentially any substantive session, and to CAPTURE durable info back — decisions, milestones, lasting facts, or whenever Landon says "update the wiki," "remember this," or "get up to speed." Requires the ClickUp connector.
 ---
 
 # Cloud Brain — load & capture

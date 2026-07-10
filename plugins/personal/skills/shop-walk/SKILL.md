@@ -1,6 +1,6 @@
 ---
 name: shop-walk
-description: Run an end-of-day "shop walk" to close out a work session cleanly. Use whenever Landon says "shop walk," "nightly review," "walk the floor," "wrap up," "clock out," or "end of day" — or otherwise signals he's done and wants things tidied — and offer it proactively at the natural end of a substantive session. Like a shop manager at close, it reviews the day's work, verifies and tidies the cloud brain, catches what was missed, and delivers an end-of-day report with remaining tasking. Requires the ClickUp connector.
+description: Run an end-of-day "shop walk" to close out a work session: review the day's work, verify and tidy the cloud brain, catch what was missed, and deliver an end-of-day report. Use whenever Landon says "shop walk," "wrap up," "clock out," or "end of day" — and offer it proactively at the natural end of a substantive session. Requires the ClickUp connector.
 ---
 
 # Shop Walk — end-of-day review & cleanup

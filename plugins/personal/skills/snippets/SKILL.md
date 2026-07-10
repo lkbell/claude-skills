@@ -1,6 +1,6 @@
 ---
 name: snippets
-description: Landon's snippet capture — fire-and-forget filing of the little bits of info he sends throughout the day. Use whenever Landon sends a bare link/URL, a quote, a stray thought or idea, an event or date to remember, a to-do, a status update on something in flight, or any pasted fragment with no question attached — or says "snippet," "save this," "file this," "remember this," or "capture this." Claude classifies what the snippet is and auto-files it (task board, calendar, brain collections) per the brain's Snippet Routing Protocol, replying with only a one-line receipt. Requires the ClickUp connector.
+description: Landon's snippet capture — fire-and-forget filing of the bits of info he sends all day. Use whenever he sends a bare link, quote, stray thought, event, to-do, or pasted fragment with no question attached — or says "save this," "file this," "remember this." Classify and auto-file per the brain's Snippet Routing Protocol; reply with a one-line receipt. Requires the ClickUp connector.
 ---
 
 # Snippets — fire-and-forget capture & auto-filing
