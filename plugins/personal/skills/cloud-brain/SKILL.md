@@ -1,39 +1,55 @@
 ---
 name: cloud-brain
-description: Landon's cloud brain — his ClickUp wiki of durable knowledge, project continuity, and the standing orders for working with him (the Bible). Use it to LOAD his context at the start of essentially any substantive session, and to CAPTURE durable info back — decisions, milestones, lasting facts, or whenever Landon says "update the wiki," "remember this," or "get up to speed." Requires the ClickUp connector.
+description: Landon's Brain — his private GitHub repo (lkbell/brain) of durable knowledge, project-continuity records, and the standing orders for working with him (the Bible). Use it to LOAD his context at the start of essentially any substantive session, and to CAPTURE durable info back — decisions, milestones, lasting facts, or whenever Landon says "update the wiki," "remember this," or "get up to speed." Requires the GitHub connector (repo lkbell/brain).
 ---
 
-# Cloud Brain — load & capture
+# The Brain — load & capture
 
-Landon's cloud brain is his persistent, cross-session memory in ClickUp (folder "Brain (Personal Wiki)", workspace 90141328427). **📍 START HERE is the single entry point** — it explains how the brain is organized, holds the read/write/maintain rules, and routes you onward (to the **📖 Bible**, the standing orders for how to work with Landon, and to **📡 Now — Situation Board**, the working-memory page of what's hot today). Use the **ClickUp connector** for all access. (The connector signs in as a separate account, "LKB's Claude Web," not Landon's own login.)
+Landon's Brain is his persistent, cross-session memory: the private GitHub repo **lkbell/brain**, accessed via the **GitHub connector**. It replaced the old ClickUp wiki ("Brain 1.0") — same job, new home. **The task board stays in ClickUp** (the `tasks` skill) — only the Brain itself (knowledge, continuity, standing orders) moved.
 
-**Always start here:** read **START HERE** (ClickUp doc `2kydf11b-754`) and follow everything it tells you — including the pages it routes you to (the 📖 Bible and 📡 Now especially). By design this skill points **only** at START HERE and does **not** hardcode other page IDs: START HERE owns the routing, so this skill never needs editing when the brain is restructured.
+**Always start at `README.md`** — the single entry point. It's the operating manual: explains how the repo is organized, holds the write mechanics (lanes, commit conventions, the review-artifact rule), and routes you onward to **`bible/working-with-landon.md`** (the Bible — standing orders for how to work with Landon) and **`now.md`** (the Situation Board — what's hot today). This skill points only at README.md and the handful of load-bearing paths below — it does not hardcode deeper structure, so it survives repo reorganization.
 
-**Follow the checklists literally.** START HERE §5 contains a 7-step **write ritual** and a **landing checklist**; each step exists because skipping it has already caused a real failure (lost content, stale duplicates, broken pointers). A session that runs them mechanically outperforms one that improvises — especially the steps that feel unnecessary in the moment.
+**Follow the checklists literally.** README.md's write ritual and landing checklist exist because skipping a step has already caused a real failure (lost content, stale duplicates, broken pointers). Run them mechanically, especially the steps that feel unnecessary in the moment.
 
 ## Mode 1 — Load / get up to speed
-1. Read START HERE (`2kydf11b-754`) and follow it, including the pages it routes you to — the 📖 Bible (standing orders; read and heed it) and 📡 Now — Situation Board (the one-page working memory: deadlines, active-project states, what's waiting on whom). Manual + Bible + Now is the full load.
-2. Use START HERE's **Index (§9)** to choose the right component doc.
-3. For a project: open the **🗂️ Projects** hub's Index and read the project's **Snapshot** page (a complete briefing on its own); open sub-pages only for deeper detail.
-4. For a specific item (a 🧠 Wiki page — People, Knowledge, Work, Finances — or a Daily Log entry, etc.): list the doc's pages first, then read only the page you need — don't read a whole doc for one item.
-5. Briefly confirm what you loaded and the current state before acting. If the structure you observe differs from what the docs describe, the live structure wins — reconcile per START HERE §4.
+1. Read **README.md** and follow it, including the pages it routes you to — **`bible/working-with-landon.md`** (standing orders; read and heed it) and **`now.md`** (the one-page working memory: deadlines, active-project states, what's waiting on whom). README + Bible + Now is the full load.
+2. Use README.md's index to find the right resource: **`wiki/`** for durable knowledge (people, knowledge, work, finances, health), **`projects/`** for project continuity, **`log/`** for the episodic daily record, **`inbox/`** for raw capture.
+3. For a project: open **`projects/<name>/snapshot.md`** — a complete briefing on its own; open sibling files only for deeper detail.
+4. For a specific item elsewhere in the repo: list the directory first, then read only the file you need — don't pull a whole tree for one fact.
+5. Briefly confirm what you loaded and the current state before acting. If the structure you observe differs from what README.md describes, the live structure (what's actually in the repo) wins.
 
 ## Mode 2 — Capture / save
 When a decision is made, direction changes, a milestone or substantial chunk of work completes, durable facts appear, or Landon says "update the wiki":
-1. Run START HERE **§5's write ritual** — all seven checks, literally. The load-bearing ones: **read the current page in full before overwriting** (an update replaces the entire page — removals must be deliberate); **one fact, one home** (link to a changeable fact's canonical page instead of copying it); **sync the collection index in the same edit**; **verify Tier-1 full rewrites** (People principals, Bible, the manual, Snapshots — diff against the prior content); **check the External Pointers Registry** (Cloud Brain — Resources) on any structural change.
-2. Write for a blank reader: be specific and complete, not punchy-but-vague. Use **absolute dates** (`YYYY-MM-DD`). One item per page; title sub-pages `<Parent> — <Name>`. No empty pages.
-3. At the end of a substantial session, run START HERE **§5's landing checklist**: rebuild 📡 Now if the picture changed · update touched project Snapshots (dated Status entry) · add the day's Daily Log line · triage Inbox feedback (aging rule) · make sure anything you told Landon is recorded where the next session will see it.
-4. New docs must be created **Public** (inside the Private folder) so Landon can see them. The connector **cannot delete** — **archive in place** instead of removing.
+1. **Know your lane before you write** (defined in README.md; repeated here because it governs every write):
+   - **Append lane** — `inbox/`, `log/`, `now.md`, `files/` — direct commits to main. Fast, no review needed.
+   - **Content lane** — `wiki/`, `projects/` (excluding `snapshot.md`) — a PR that auto-merges once checks pass.
+   - **Protected lane** — `README.md`, `bible/`, `meta/checks`, `meta/jobs`, the People principals' pages, `projects/*/snapshot.md` — a PR **plus** an independent review artifact (below). A GitHub-native approval does not satisfy this requirement.
+   - For a multi-file content-lane batch in one session, use **one branch for the whole session** rather than a branch per file.
+2. Write for a blank reader: be specific and complete, not punchy-but-vague. Use absolute dates (`YYYY-MM-DD`). One fact, one home — link to a changeable fact's canonical file instead of copying it.
+3. Every commit message ends with a surface tag, e.g. `[surface:web]`, `[surface:phone]`, `[surface:cowork]`, `[surface:mini]`, or `[surface:<job-name>]`. Never omit it.
+4. At the end of a substantial session, run the **landing checklist**: rebuild **`now.md`** if the picture changed (append lane — direct commit); update any touched **`projects/*/snapshot.md`** (protected lane — PR + review artifact); add a **`log/`** entry for the day; triage **`inbox/`**.
+5. The connector **cannot delete branches or repos** and **cannot move or rename files atomically** — a rename is really a delete-plus-create, which shows up as two changes, not one. Plan file placement deliberately up front.
+
+## The review-artifact convention
+A protected-lane PR only merges once someone other than its author pushes an independent review file to the PR branch at `meta/reviews/pr-<n>-*.md` — a GitHub-native approval does not count. In practice: if you opened the protected-lane PR, don't self-review it; get a separate session (or Landon) to push the review file before it merges.
 
 ## Feedback handling
-When Landon gives a preference, correction, or feedback, follow START HERE §5's feedback loop: capture one line to the 📥 Inbox tagged `feedback`, apply it immediately for the rest of the session (confirm in one line), and triage it during the daily cleanup — an item that survives two cleanups becomes a ✅ Tasks board task (aging rule).
+When Landon gives a preference, correction, or feedback: capture one line to **`inbox/`** (append lane — direct commit), apply it immediately for the rest of the session (confirm in one line), and let it get triaged during maintenance per README.md's aging rule.
 
 ## Proactive capture
-At the end of a substantial session, or when a clear decision / milestone / durable fact lands, **briefly offer** to capture it to the brain — one line, don't nag. Capture only during a live session (a detached or scheduled job can't see the conversation it would record); scheduling is reserved for maintenance.
+At the end of a substantial session, or when a clear decision / milestone / durable fact lands, **briefly offer** to capture it to the Brain — one line, don't nag. Capture only during a live session (a detached or scheduled job can't see the conversation it would record); scheduling is reserved for maintenance.
 
 ## Key resources
-- **📍 START HERE** (the entry point — brain structure, rules, and routing to the Bible + 📡 Now): doc `2kydf11b-754`.
-- Brain folder "Brain (Personal Wiki)": `901410154929` (workspace `90141328427`).
+- **`README.md`** — the entry point: repo structure, lane rules, write mechanics, routing to the Bible + `now.md`.
+- **`bible/working-with-landon.md`** — the Bible (standing orders for working with Landon).
+- **`now.md`** — the Situation Board (working memory, rebuilt at landing).
+- Repo: **lkbell/brain** (private), accessed via the GitHub connector.
 
-## If the ClickUp connector isn't available on this surface
-Say so plainly and proceed without the brain here; offer to load or capture later on a surface where ClickUp is connected.
+## Connector limits (known — don't rediscover these mid-session)
+- **Cannot read CI/Actions status** — those calls come back 403. To check whether a PR's checks passed, check the PR's merged state instead, or use the browser.
+- **Cannot delete branches or repos.**
+- **Cannot move or rename files atomically** — it's always delete + create.
+- **~50-60KB practical ceiling** on file content passed through a single tool call — split the write or use another path for anything larger.
+
+## If the GitHub connector isn't available on this surface
+Say so plainly and proceed without the Brain here; offer to load or capture later on a surface where GitHub is connected.
