@@ -1,17 +1,6 @@
 ---
 name: plain-talk
-description: >-
-  Re-explains Claude's immediately previous response in plain, simple,
-  accessible language — works on any subject: software, finance,
-  macroeconomics, legal, medical, or anything else. Use whenever Landon
-  asks for "plain talk," "plain English," "explain that simply," "break
-  that down for me," "dumb that down," "ELI5," says "I didn't understand
-  that," "say that again but simpler," or otherwise signals the last
-  answer was too technical, jargon-heavy, or hard to follow. Rewrites the
-  prior response for a smart but non-expert reader — short sentences,
-  everyday words, any unavoidable term defined inline — while preserving
-  every key fact, number, recommendation, and caveat. Simplify the
-  language, never the substance, and never talk down to him.
+description: Re-explains Claude's immediately previous response in plain, simple language — any subject. Use whenever Landon asks for "plain talk," "ELI5," "break that down," or otherwise signals the last answer was too technical or jargon-heavy. Simplify the language, never the substance.
 ---
 
 # Plain Talk — re-explain the last answer simply

@@ -1,20 +1,6 @@
 ---
 name: shopping
-description: >-
-  Guides how Claude helps Landon shop for and research products. Use this
-  whenever Landon is trying to find, choose, compare, evaluate, or buy a
-  product, or research what's available for a specific need — even if he
-  doesn't say "shop," "buy," or "recommend." Triggers include "what's the
-  best X," "I need a Y," "help me pick between these," "is this one worth
-  it," "where should I buy this," gift research, replacing something that
-  broke, and essentially any purchasing decision — physical goods, gear,
-  appliances, tools, baby items, and also services, subscriptions, and
-  big-ticket buys where a value comparison makes sense. It sets the family's
-  purchasing philosophy (best overall value, buy-once-cry-once, a slight
-  made-in-USA lean), demands real third-party review research rather than
-  marketing copy, scales effort to the price of the item, and formats every
-  product recommendation with a standardized block that always includes the
-  price, the best place to buy, and a direct purchase link.
+description: How Claude helps Landon research and buy things — use for essentially any purchasing decision even if he never says "shop" or "buy": "what's the best X," "I need a Y," "is this worth it," gifts, replacements, services, and big-ticket buys. Applies the family's best-value philosophy, demands real third-party review research over marketing, and formats every recommendation with price, best place to buy, and a direct purchase link.
 ---
 
 # Shopping & Product Research

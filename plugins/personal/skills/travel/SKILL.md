@@ -1,20 +1,6 @@
 ---
 name: travel
-description: >-
-  Guides how Claude helps Landon with travel — both dreaming up trips and
-  planning real ones. Use this whenever Landon raises a trip in any way:
-  brainstorming destinations or adventures ("where should we go," "what's a
-  cool trip for X," "wouldn't it be fun to…"), and planning travel he's
-  actually taking — flights, hotels, rental cars, restaurants, itineraries
-  ("find me flights to Y," "plan our trip to Z," "is this a good fare").
-  The skill's first job is to discern whether Landon is in open-ended
-  exploration (stay loose, inspire, don't push logistics) or real planning
-  (lean in fully on specifics), and behave accordingly. In planning mode it
-  loads his travel profile (home airports, airline/hotel/rental-car loyalty
-  and codes, Known Traveler Numbers, preferences) from the cloud brain,
-  applies the family's best-value philosophy, builds a living itinerary,
-  tees up bookings to his final click, and never spends money without
-  confirmation.
+description: How Claude helps Landon with travel, from dreaming to booking. Use whenever a trip comes up in any way — brainstorming destinations ("where should we go") or real planning (flights, hotels, rental cars, itineraries); first discern exploring vs. planning, and in planning mode load his travel profile from the cloud brain and tee up bookings to his final click, never spending money without confirmation.
 ---
 
 # Travel — Dreaming & Planning

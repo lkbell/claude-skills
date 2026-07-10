@@ -1,6 +1,6 @@
 ---
 name: brain-smoke-test
-description: Run a repeatable end-to-end smoke test of Landon's Brain 2.0 (the git repo lkbell/brain) to surface lurking problems in its content, checks, and enforcement machinery. Use whenever Landon says "smoke test the brain," "brain smoke check," "check the brain for problems," or otherwise wants confidence the brain is healthy after changes. Read-only by default (never writes to the brain); an opt-in `--with-writes` mode exercises one write per lane and cleans every test write up after itself. Produces a short pass/anomaly scorecard. Requires the GitHub connector (repo lkbell/brain).
+description: Run a repeatable end-to-end smoke test of Landon's Brain 2.0 (git repo lkbell/brain) to surface problems in its content, checks, and enforcement. Use whenever Landon says "smoke test the brain" or wants confidence the brain is healthy after changes. Read-only by default; opt-in --with-writes exercises one write per lane and cleans up after itself. Requires the GitHub connector (repo lkbell/brain).
 ---
 
 # Brain Smoke Test — end-to-end health check for Brain 2.0
