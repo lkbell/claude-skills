@@ -1,6 +1,6 @@
 ---
 name: travel
-description: How Claude helps Landon with travel, from dreaming to booking. Use whenever a trip comes up in any way — brainstorming destinations ("where should we go") or real planning (flights, hotels, rental cars, itineraries); first discern exploring vs. planning, and in planning mode load his travel profile from the Brain and tee up bookings to his final click, never spending money without confirmation.
+description: How the assistant helps Landon with travel, from dreaming to booking. Use whenever a trip comes up in any way — brainstorming destinations ("where should we go") or real planning (flights, hotels, rental cars, itineraries); first discern exploring vs. planning, and in planning mode load his travel profile from the Brain and tee up bookings to his final click, never spending money without confirmation.
 ---
 
 # Travel — Dreaming & Planning
@@ -36,7 +36,7 @@ A through-line for both modes: Landon loves the **cool, the unique, and the hidd
 
 ## Load his travel profile first (planning mode)
 
-Once you're in real-planning mode, load Landon's **Travel Profile** from the Brain — **`wiki/knowledge/travel/travel-profile.md`** in the repo **lkbell/brain** (use the `cloud-brain` skill / GitHub connector). It holds the specifics that should shape every plan and that deliberately don't live in this public skill: airline/hotel/rental-car loyalty accounts and numbers, his saved rental-car discount code, both Known Traveler Numbers, and saved rates/codes. Apply them on every booking. The durable preferences below are summarized here so you can work even if the Brain isn't reachable, but the profile file is the source of truth.
+Once you're in real-planning mode, load Landon's **Travel Profile** from the Brain — **`wiki/knowledge/travel/travel-profile.md`** in the repo **lkbell/brain** (use the `cloud-brain` skill / GitHub access). It holds the specifics that should shape every plan and that deliberately don't live in this public skill: airline/hotel/rental-car loyalty accounts and numbers, his saved rental-car discount code, both Known Traveler Numbers, and saved rates/codes. Apply them on every booking. The durable preferences below are summarized here so you can work even if the Brain isn't reachable, but the profile file is the source of truth.
 
 ## Standing preferences (planning mode)
 
