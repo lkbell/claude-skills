@@ -58,7 +58,7 @@ Answer first, scaled to the scope of the question, with every load-bearing claim
 ## Model selection
 
 - **Orchestrator (Phase 0 framing, adjudication, synthesis, final quality):** the highest-capability model available in the session — the framing and adjudication decisions are where research quality is actually won or lost.
-- **Lane workers:** default to a Sonnet-class model. Upgrade a single lane to a frontier model when its subtask is genuinely hard (dense primary-document analysis, methods-section adjudication, subtle comparison design). Haiku-class almost never — only trivial, fully-specified, high-volume grunt work.
+- **Lane workers:** default to a workhorse-tier model. Upgrade a single lane to a frontier (top-tier) model when its subtask is genuinely hard (dense primary-document analysis, methods-section adjudication, subtle comparison design). The light tier almost never — only trivial, fully-specified, high-volume grunt work.
 - **Verifier (Phase 3):** at least as capable as whichever model drafted the report — verifier ≥ author, always.
 - **Quick mode:** runs acceptably on a mid-tier model precisely because the self-audit requirement compensates; the audit section is not optional at any capability level.
 

@@ -1,13 +1,13 @@
 ---
 name: brain-smoke-test
-description: Run a repeatable end-to-end smoke test of Landon's Brain 2.0 (git repo lkbell/brain) to surface problems in its content, checks, and enforcement. Use whenever Landon says "smoke test the brain" or wants confidence the brain is healthy after changes. Read-only by default; opt-in --with-writes exercises one write per lane and cleans up after itself. Requires the GitHub connector (repo lkbell/brain).
+description: Run a repeatable end-to-end smoke test of Landon's Brain 2.0 (git repo lkbell/brain) to surface problems in its content, checks, and enforcement. Use whenever Landon says "smoke test the brain" or wants confidence the brain is healthy after changes. Read-only by default; opt-in --with-writes exercises one write per lane and cleans up after itself. Requires GitHub access (repo lkbell/brain).
 ---
 
 # Brain Smoke Test — end-to-end health check for Brain 2.0
 
 Exercise as much of the brain's operating model as possible, adversarially, and report what works and what's broken. Brain 2.0 is the private git repo **`lkbell/brain`**: plain-markdown pages + enforcement-as-code (the check suite in `meta/checks/`, the merge-bot, and the tripwire). The design spec is `meta/design.md`; the operating manual is `README.md`. This skill is the distilled, repeatable version of a full manual smoke test.
 
-**Default is READ-ONLY.** Do not write to the brain unless Landon explicitly asks for the write round-trip (`--with-writes`, below). Access is via the **GitHub connector**. Note two known limits up front and design around them: the connector **cannot** read a commit's combined status or check-runs (403) — infer CI results from behavior (a green content PR auto-merges in seconds; a red one stays open) or view the Actions tab in the browser; and the connector **cannot** delete branches — list test branches for Landon to delete.
+**Default is READ-ONLY.** Do not write to the brain unless Landon explicitly asks for the write round-trip (`--with-writes`, below). Access is via **GitHub**. Note two known limits up front and design around them: GitHub access **cannot** read a commit's combined status or check-runs (403) — infer CI results from behavior (a green content PR auto-merges in seconds; a red one stays open) or view the Actions tab in the browser; and it **cannot** delete branches — list test branches for Landon to delete.
 
 Ground yourself first: skim `README.md` (the operating manual), then `meta/design.md` §3 (write lanes) and §5 (checks) so you are testing against the locked spec, not memory.
 
@@ -28,13 +28,13 @@ Only with Landon's go-ahead. Exercise one write per lane, then remove every test
 - **Content lane** (`wiki/`, `projects/`, `meta/pointers.yaml`, `meta/facts.yaml`): open a PR adding a clean synthetic page. Confirm it **auto-merges** on green.
 - **Protected lane** (Tier-1 paths + `meta/checks/` + `meta/jobs/` + `.github/`): open a PR touching a protected path with **no** review artifact. Confirm the merge-bot **holds** it and comments that an independent review artifact is required — then close it unmerged (do not fabricate a self-review; authors never review their own PRs).
 - **Deletion + concurrent-edit (optional):** delete the content-lane probe via a PR carrying a `Deliberate-Removal:` trailer; optionally open two branches that add the same path to confirm the second surfaces as a conflict (`mergeable_state: dirty`).
-- **Clean up:** remove every landed test write (append-lane deletes are direct commits with a `Deliberate-Removal:` trailer; content-lane deletes go via an auto-merging PR). Close all unmerged test PRs and **list their branches for Landon to delete** (the connector can't). Leave `main` green — verify before finishing.
+- **Clean up:** remove every landed test write (append-lane deletes are direct commits with a `Deliberate-Removal:` trailer; content-lane deletes go via an auto-merging PR). Close all unmerged test PRs and **list their branches for Landon to delete** (GitHub access can't). Leave `main` green — verify before finishing.
 
 ## Working principles
 
 - **Adversarial, not perfunctory.** The point is to surface lurking problems, so actively try to break things (provoke each check; force a conflict) rather than confirm the happy path only.
 - **Never leave the brain dirtier than you found it.** Every `--with-writes` probe is cleaned up; `main` must end green. If you can't clean something up, say so loudly and list it.
-- **Infer CI honestly.** Since the connector can't read statuses, state your evidence (auto-merge timing, `mergeable_state`, merge-bot comments) rather than claiming to have read a green check you couldn't see.
+- **Infer CI honestly.** Since GitHub access can't read statuses, state your evidence (auto-merge timing, `mergeable_state`, merge-bot comments) rather than claiming to have read a green check you couldn't see.
 - **Log every anomaly** with a severity and a suggested fix. Fix only what's mechanical and obviously safe; list judgment calls for Landon.
 
 ## Scorecard — what to report

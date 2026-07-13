@@ -1,6 +1,6 @@
 ---
 name: shopping
-description: How Claude helps Landon research and buy things — use for essentially any purchasing decision even if he never says "shop" or "buy": "what's the best X," "I need a Y," "is this worth it," gifts, replacements, services, and big-ticket buys. Applies the family's best-value philosophy, demands real third-party review research over marketing, and formats every recommendation with price, best place to buy, and a direct purchase link.
+description: How the assistant helps Landon research and buy things — use for essentially any purchasing decision even if he never says "shop" or "buy": "what's the best X," "I need a Y," "is this worth it," gifts, replacements, services, and big-ticket buys. Applies the family's best-value philosophy, demands real third-party review research over marketing, and formats every recommendation with price, best place to buy, and a direct purchase link.
 ---
 
 # Shopping & Product Research
@@ -74,7 +74,7 @@ For a **single-item question** ("is this one any good," "should I buy this"), sk
 
 ## The standardized product block
 
-Every specific product you recommend gets a consistent block. This is the part default Claude routinely skips — especially the purchase link — so treat it as the backbone of any shopping response. Include:
+Every specific product you recommend gets a consistent block. This is the part a default assistant routinely skips — especially the purchase link — so treat it as the backbone of any shopping response. Include:
 
 - **Photo** of the actual item — embed the image when the surface supports it; otherwise include a clearly labeled direct image link. A picture or two of the specific product, not a generic stand-in.
 - **Name & company** — the product and who makes it.

@@ -1,19 +1,19 @@
 ---
 name: shop-walk
-description: Run an end-of-day "shop walk" to close out a work session: review the day's work, verify and tidy the Brain, catch what was missed, and deliver an end-of-day report. Use whenever Landon says "shop walk," "wrap up," "clock out," or "end of day" — and offer it proactively at the natural end of a substantive session. Requires the ClickUp connector (task board) and the GitHub connector (the Brain, repo lkbell/brain).
+description: Run an end-of-day "shop walk" to close out a work session: review the day's work, verify and tidy the Brain, catch what was missed, and deliver an end-of-day report. Use whenever Landon says "shop walk," "wrap up," "clock out," or "end of day" — and offer it proactively at the natural end of a substantive session. Requires ClickUp access (task board) and GitHub access (the Brain, repo lkbell/brain).
 ---
 
 # Shop Walk — end-of-day review & cleanup
 
 Act like a shop manager walking the floor at close: review the day's work, make sure everything's in order, catch what got missed, and give clear final tasking before the team clocks out. Be thorough, not perfunctory — this is the safety net that keeps the Brain trustworthy, so it's worth doing properly.
 
-Ground yourself first: if you haven't already this session, skim **`README.md`** in the repo **lkbell/brain** (via the GitHub connector) so you're working from its current structure and rules — it routes you to **`bible/working-with-landon.md`** and **`now.md`** if you need them too.
+Ground yourself first: if you haven't already this session, skim **`README.md`** in the repo **lkbell/brain** (via GitHub) so you're working from its current structure and rules — it routes you to **`bible/working-with-landon.md`** and **`now.md`** if you need them too.
 
 ## The walk
 
 1. **Review the whole session** for anything open, deferred, promised, or needing action — yours or Landon's. Don't let loose ends drop silently.
-2. **Walk the task board** — the board itself stays in ClickUp; its operating model now lives at **`tasks/README.md`** in **lkbell/brain** (GitHub connector). Bring statuses current, capture the day's loose ends as tasks in the right Lists, chase "pending / needs flup" items, tee up tomorrow's priorities, and push any time-bound items to the calendar.
-3. **Verify the real state of everything created or edited this session.** Actually read each artifact back from where it lives — do not trust your memory or a tool's "success" response. For Brain artifacts, **read the day's commits/diffs via `list_commits`** (GitHub connector) to confirm what actually landed — a commit list is the literal record, so this replaces the old ClickUp keyword-search caveat entirely rather than just supplementing it. For board/calendar items, read them back directly as before. This is the most important step: past sessions have reported changes that hadn't really landed, so reading back the true state is non-negotiable.
+2. **Walk the task board** — the board itself stays in ClickUp; its operating model now lives at **`tasks/README.md`** in **lkbell/brain** (GitHub access). Bring statuses current, capture the day's loose ends as tasks in the right Lists, chase "pending / needs flup" items, tee up tomorrow's priorities, and push any time-bound items to the calendar.
+3. **Verify the real state of everything created or edited this session.** Actually read each artifact back from where it lives — do not trust your memory or a tool's "success" response. For Brain artifacts, **read the day's commits/diffs via `list_commits`** (GitHub access) to confirm what actually landed — a commit list is the literal record, so this replaces the old ClickUp keyword-search caveat entirely rather than just supplementing it. For board/calendar items, read them back directly as before. This is the most important step: past sessions have reported changes that hadn't really landed, so reading back the true state is non-negotiable.
 4. **Check cross-doc consistency.** The Brain's files should agree — design, links, status, naming. Reconcile contradictions (e.g., a Snapshot still saying "planned" for something now built).
 5. **Inventory for cruft.** Look for orphaned, outdated, test, or overcome-by-events content: list the Brain's directories (`wiki/`, `projects/`, `inbox/`) and cross-check against README.md's index. Flag anything to archive or delete (route any deletion through the normal lane process for that path). Unlike the old ClickUp doc search, a repo directory listing is exhaustive, not keyword-limited — no "may not be exhaustive" caveat is needed here.
 6. **Log the day.** Append today's entry to **`log/YYYY-MM.md`** (append lane — direct commit) if it isn't already done.
@@ -34,8 +34,8 @@ Give Landon a clear close-out he can skim:
 - **✅ Verified** — what you checked and confirmed is correct.
 - **🔧 Fixed** — what you corrected, briefly.
 - **⚠️ Still open / flagged** — loose ends, unresolved inconsistencies, things needing his judgment.
-- **📋 Tasking** — split into **Landon's** (e.g., a decision only he can make, or reviewing a pending protected-lane PR) and **Claude / next session** (what to pick up next time).
+- **📋 Tasking** — split into **Landon's** (e.g., a decision only he can make, or reviewing a pending protected-lane PR) and **the assistant / next session** (what to pick up next time).
 
 The point is that Landon can clock out trusting the shop is clean.
 
-If the ClickUp connector isn't available on this surface, say so and do what you can from the session alone. If the GitHub connector isn't available, say so and skip the Brain verification/log/inbox/snapshot steps — do what you can with the board and the session alone.
+If ClickUp access isn't available on this surface, say so and do what you can from the session alone. If GitHub access isn't available, say so and skip the Brain verification/log/inbox/snapshot steps — do what you can with the board and the session alone.

@@ -1,6 +1,6 @@
 ---
 name: deep-research-contested
-description: Deep research for topics touching politics or culture — anywhere the left-right axis runs through the evidence. Use whenever Landon asks for deep research, "the real story," or a behind-the-press-releases account where media framing or Claude's documented left lean could tilt the answer; counter-weighted process, truth-fixed evidence standards. If honest researchers left and right would converge on the same evidence ("best EV to buy"), use deep-research-general instead.
+description: Deep research for topics touching politics or culture — anywhere the left-right axis runs through the evidence. Use whenever Landon asks for deep research, "the real story," or a behind-the-press-releases account where media framing or the assistant's documented left lean could tilt the answer; counter-weighted process, truth-fixed evidence standards. If honest researchers left and right would converge on the same evidence ("best EV to buy"), use deep-research-general instead.
 ---
 
 # Deep Research — Contested Topics (v1.2)
@@ -71,13 +71,13 @@ Report states: conclusions with confidence tiers tied to evidence class; a ledge
 ## Model selection
 
 - **Orchestrator (Phase 0 frame audit, adjudication, synthesis, final quality):** the highest-capability model available in the session. The frame audit and the adjudication are where the counterweight either works or silently fails — do not delegate them down.
-- **Lane workers (A–E):** default to a Sonnet-class model. If any single lane gets a frontier-model upgrade, it should be Lane A (Advocate-Right) — consistent with the asymmetric-effort rule, since that lane fights the corpus instead of surfing it — or Lane C when the primary-document load is heavy.
+- **Lane workers (A–E):** default to a workhorse-tier model. If any single lane gets a frontier-model (top-tier) upgrade, it should be Lane A (Advocate-Right) — consistent with the asymmetric-effort rule, since that lane fights the corpus instead of surfing it — or Lane C when the primary-document load is heavy.
 - **Frame verifier (Phase 3):** at least as capable as whichever model drafted the report — verifier ≥ author, always. A weaker verifier will rubber-stamp exactly the framing failures this skill exists to catch.
-- **Quick mode:** validated on a Sonnet-class model; acceptable at that level precisely because the self-audit requirement compensates. The self-audit is not optional at any capability level.
+- **Quick mode:** validated on a workhorse-tier model; acceptable at that level precisely because the self-audit requirement compensates. The self-audit is not optional at any capability level.
 
 ## How to run it
 
-**Full mode (big questions, hours):** orchestrator runs Phase 0, launches Lanes A-E as parallel sub-agents with self-contained briefs (per the Bible's Sub-agent Playbook where loaded), adjudicates, drafts, sends the draft + this spec to a fresh frame-verifier agent, resolves every finding, delivers with the ledger.
+**Full mode (big questions, hours):** orchestrator runs Phase 0, launches Lanes A-E as parallel sub-agents with self-contained briefs (per your standing sub-agent playbook — e.g. the Bible's Sub-agent Playbook — if one is loaded), adjudicates, drafts, sends the draft + this spec to a fresh frame-verifier agent, resolves every finding, delivers with the ledger.
 
 **Quick mode (single agent, ~10-15 min — validated 2026-07-10):** one agent reads this spec, compresses the lanes into sequential mini-passes (~20-30 tool calls: primary record → right-coded pass with extra effort → left-coded pass → ground experience → reversal tests for load-bearing claims only → counterfactual forecast), drafts the right-coded reading first, then synthesizes — and MUST end with a self-audit section grading itself against the ten failure modes, reporting what it caught, corrected, and left unresolved. The self-audit is what makes small-budget output trustworthy.
 
