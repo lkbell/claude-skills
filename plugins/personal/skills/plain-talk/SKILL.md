@@ -1,6 +1,6 @@
 ---
 name: plain-talk
-description: Re-explains Claude's immediately previous response in plain, simple language — any subject. Use whenever Landon asks for "plain talk," "ELI5," "break that down," or otherwise signals the last answer was too technical or jargon-heavy. Simplify the language, never the substance.
+description: Re-explains the assistant's immediately previous response in plain, simple language — any subject. Use whenever Landon asks for "plain talk," "ELI5," "break that down," or otherwise signals the last answer was too technical or jargon-heavy. Simplify the language, never the substance.
 ---
 
 # Plain Talk — re-explain the last answer simply
