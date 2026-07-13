@@ -6,7 +6,7 @@ A GitHub repo that acts as a Claude plugin marketplace. Add it once per surface
 ## Layout
 - `.claude-plugin/marketplace.json` — registers this repo as the marketplace (`landon-hub`)
 - `plugins/personal/.claude-plugin/plugin.json` — the `personal` plugin
-- `plugins/personal/skills/<name>/SKILL.md` — one folder per skill (currently `example-brief`, a starter/smoke-test)
+- `plugins/personal/skills/<name>/SKILL.md` — one folder per skill (browse `plugins/personal/skills/` for the current set)
 
 ## Use it
 1. In your assistant's plugin settings (Claude: **Customize → Plugins → "+" → Add marketplace → Add from a repository**) → `https://github.com/lkbell/agent-skills` → install the **personal** plugin.
