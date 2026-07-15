@@ -7,6 +7,16 @@ description: Turn an approved plan into supervised execution by keeping the curr
 
 Preserve the planning thread as the architect and source of truth. Launch a clean execution thread as the foreman, supervise it through completion, and keep Landon able to see progress without making him operate the handoff.
 
+## Preserve the Brain 2.0 operating model
+
+Treat the Brain Operating Manual and Bible as governing architecture throughout planning, execution, and closeout.
+
+- Read the relevant project snapshot before launch when one exists; checkpoint an approved multi-session plan and material execution state in its canonical project home.
+- Keep live action items on the task board and durable decisions, outcomes, and continuity in the Brain. Link across systems instead of copying changing facts.
+- Route every Brain write through its defined lane, write ritual, checks, review requirements, and landing checklist.
+- Extend existing Brain components and canonical homes; never create a parallel memory, policy, task, status, or control system for the foreman workflow.
+- Keep the workflow agent-agnostic. Express roles and capability requirements neutrally; isolate unavoidable platform-specific mechanics as adapters rather than letting them shape the core process.
+
 ## Gate the transition
 
 Use this workflow only when the architect and Landon have reached meaningful alignment on the outcome. Before launching, ensure the record contains:
