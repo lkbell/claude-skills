@@ -12,7 +12,8 @@ Turn scattered context into a verified plan and execution handoff. Do not turn p
 - Treat planning and execution approval as different facts. Record evidence for authorization.
 - Stop at the launch gate unless Landon has already approved execution of the current scope.
 - Never infer authority for third-party communication, spending, deletion or data loss, public release, or access expansion. Name later confirmation points in the plan.
-- Resolve safe, reversible planning uncertainty without asking. Keep checks proportional.
+- Resolve safe, reversible planning uncertainty without asking.
+- Choose the smallest pass that can change readiness. When the outcome, plan, live state, and authority are already clear, use a lean pass: verify essentials, repair only material gaps, and skip external research or subagents unless a contradiction appears. Use the full workflow for inherited, cross-system, high-risk, or contradictory work. If preflight starts to rival the likely build in time or effort, stop and rescope.
 
 ## Load the real record
 
@@ -101,14 +102,14 @@ Include:
 - scope, non-goals, settled decisions, and constraints;
 - authorization boundary and actions reserved for Landon;
 - phased deliverables, dependencies, acceptance checks, and recovery requirements;
-- first action, escalation conditions, and reporting contract;
+- first action, escalation conditions, and a direct callback contract naming the architect thread and wake-up milestones;
 - capability-routing policy, including any configured, inherited, automatic, or untested model, latency, reasoning, or cost constraint.
 
 The brief must let a new agent locate inputs and outputs, begin without hidden context, and prove completion.
 
 ### 7. Challenge and decide
 
-Use one independent fresh agent when available. Give it only the plan, brief, and referenced artifacts—not the conversation or expected verdict. Keep it read-only and ask:
+Use one independent fresh agent only when the project is inherited, contradictory, cross-system, high-risk, or costly to get wrong. A lean preflight uses the owner’s cold read and discloses that choice. Never nest verifier agents or repeat a test campaign unless the first review finds a material defect. When a fresh verifier is warranted, give it only the plan, brief, and referenced artifacts—not the conversation or expected verdict. Keep it read-only and ask:
 
 - What is the outcome and first action?
 - Does every outcome and deliverable have a concrete pass condition and evidence?

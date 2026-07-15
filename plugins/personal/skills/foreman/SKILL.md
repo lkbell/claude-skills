@@ -43,7 +43,7 @@ The brief must name:
 6. deliverables;
 7. verification for every material requirement;
 8. escalation conditions;
-9. reporting contract to the architect.
+9. architect callback contract: source thread ID, milestones that require a direct message, and the fallback if callbacks are unavailable.
 10. capability-routing policy, including any user-pinned model, reasoning, latency, or cost constraint.
 
 Keep the capability-routing policy inside the frozen brief even when it also appears in a separate routing plan or dashboard. State whether concrete mappings are explicitly configured, inherited, automatically routed, or still untested before launch.
@@ -66,6 +66,8 @@ Create a separate thread rather than merely spawning a worker inside the archite
 - Use a project-backed target when the work belongs to an available project; otherwise use a projectless target.
 - Use a worktree for parallel code changes when shared-directory edits could conflict.
 - Give the foreman the execution brief and instruct it to create a persistent goal.
+- Include the architect thread ID and require a direct message back to that thread when the goal starts, at every meaningful phase gate, when a decision or blocker appears, after recovery, and at completion. A final answer posted only inside the child task is not a callback and will not wake the architect.
+- Apply the same callback contract to any separate worker task the architect creates alongside the foreman.
 - Tell the foreman it owns implementation, decomposition, subagents, recovery, and verification.
 - Permit nested delegation when useful, while keeping one writer per artifact and avoiding overlapping write scopes.
 - Require the foreman to continue until done, genuinely blocked, or stopped by the architect.
@@ -74,10 +76,10 @@ Do not ask Landon to copy, download, or paste the brief into another thread.
 
 ## Supervise from the architect thread
 
-The architect remains accountable for the result and does not become a passive mailbox.
+The architect remains accountable for the result and does not become a passive mailbox. Separate tasks do not automatically wake it; direct callbacks are the primary control path.
 
-1. Record the foreman thread identifier and initial goal.
-2. Read the foreman’s status at meaningful checkpoints or through a heartbeat when the work is long-running.
+1. Record the foreman thread identifier and initial goal, then verify the foreman sends the required started callback.
+2. Read the foreman’s status at meaningful checkpoints. If direct callbacks are unavailable or fail, install a heartbeat or poll the task as the explicit fallback.
 3. Send steering when execution diverges from the approved plan, evidence is weak, a worker stalls, or the foreman tries to finish partially.
 4. Resolve questions from the existing plan when possible. Involve Landon only for a real product decision, third-party action, spending, deletion/data loss, new authority, or a hard blocker.
 5. Let the foreman own execution. Do not duplicate its implementation work in the architect thread.
@@ -104,12 +106,13 @@ Keep it operational and plain-English. Avoid constant narration, fake precision,
 
 When the foreman reports completion:
 
-1. Compare the result against the original approved plan and every definition-of-done item.
-2. Inspect material evidence and artifacts rather than accepting the foreman’s summary alone.
-3. Send the foreman back for any missing requirement, weak verification, regression, or quality problem.
-4. Mark the dashboard complete only after the architect’s review passes.
-5. Brief Landon on what shipped, what was verified, any remaining limitation, and where the result lives.
-6. Capture durable decisions and project state in the Brain under the applicable write lane.
+1. Require the completion callback to arrive in the architect task; do not infer completion merely because the child task becomes idle.
+2. Compare the result against the original approved plan and every definition-of-done item.
+3. Inspect material evidence and artifacts rather than accepting the foreman’s summary alone.
+4. Send the foreman back for any missing requirement, weak verification, regression, or quality problem.
+5. Mark the dashboard complete only after the architect’s review passes.
+6. Brief Landon on what shipped, what was verified, any remaining limitation, and where the result lives.
+7. Capture durable decisions and project state in the Brain under the applicable write lane.
 
 ## Fallbacks
 
