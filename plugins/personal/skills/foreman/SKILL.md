@@ -46,6 +46,8 @@ The brief must name:
 9. reporting contract to the architect.
 10. capability-routing policy, including any user-pinned model, reasoning, latency, or cost constraint.
 
+Keep the capability-routing policy inside the frozen brief even when it also appears in a separate routing plan or dashboard. State whether concrete mappings are explicitly configured, inherited, automatically routed, or still untested before launch.
+
 ## Route models by capability
 
 Keep routing policy agent-agnostic. Use the Brain sub-agent playbook's capability tiers, then map them at runtime to configurations the current platform actually exposes.
